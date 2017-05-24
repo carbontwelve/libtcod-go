@@ -3,7 +3,7 @@ package main
 import (
 	"compress/zlib"
 	"encoding/gob"
-	. "github.com/afolmert/libtcod-go/tcod"
+	. "github.com/carbontwelve/libtcod-go/tcod"
 	"io/ioutil"
 	"os"
 	"path"
