@@ -825,14 +825,6 @@ func (self *RootConsole) WaitForKeypress(flush bool) Key {
 	return toKey(C.TCOD_console_wait_for_keypress(fromBool(flush)))
 }
 
-func (self *RootConsole) SetKeyboardRepeat(initialDelay, interval int) {
-	C.TCOD_console_set_keyboard_repeat(C.int(initialDelay), C.int(interval))
-}
-
-func (self *RootConsole) DisableKeyboardRepeat() {
-	C.TCOD_console_disable_keyboard_repeat()
-}
-
 func (self *RootConsole) IsKeyPressed(keyCode KeyCode) bool {
 	return toBool(C.TCOD_console_is_key_pressed(C.TCOD_keycode_t(keyCode)))
 }
